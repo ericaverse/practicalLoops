@@ -30,9 +30,15 @@ let n = 0;
 let prime = false;
 //Finding Prime Number
 for (let i = 1; i < 21; i++) {
-  n += i;
-  n == 1 || n == 2 || n == 3 || n % 6 == 1
-    ? console.log(!prime + `, ` + n + `is prime.`)
+  n = i;
+  n == 1 ||
+  n == 2 ||
+  n == 3 ||
+  (n < 9 && n % 2 == 1) ||
+  (n % 2 !== 0 && n % 3 == 1) ||
+  (n % 2 !== 0 && n % 2 == 1 && n % 3 !== 0) ||
+  n % 6 == 1
+    ? console.log(!prime + `, ` + n + ` IS PRIME.`)
     : console.log(prime + `,` + n + ` is not prime.`);
 }
 console.log(`-----------------------`);
