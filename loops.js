@@ -50,7 +50,7 @@ let csvData = `Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,
 let comma = ",";
 let newLine = `\n`;
 
-let start = csvData.indexOf(newLine - 1);
+let start = 0;
 
 for (let i = 0; i < 11; i++) {
   let end = csvData.indexOf(newLine, start);
@@ -76,4 +76,3 @@ for (let i = 0; i < 11; i++) {
   //Move to the next row
   start = end + newLine.length;
 }
-
